@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+
+{%block main%}
+    <form method="post">
+        {%csrf_token%}
+        <h1>Certeza que deseja apagar {{funcionario}}</h1>
+        {{form}}
+        <button class="btn btn-danger" type="submit">Apagar</button>
+    </form>
+{%endblock%}
