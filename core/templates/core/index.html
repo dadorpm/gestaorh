@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <div class="row">
+        <div class="col">
+            Seja bem vindo
+        </div>
+        <div class="col">
+            olá {{usuario.funcionario.nome}}
+        </div>
+        <div class="col">
+            <a href="{%url 'logout'%}">Logout</a> /
+
+            {%if usuario.funcionario.empresa %}
+                <a href="{%url 'edita_empresa' usuario.funcionario.empresa.id%}">Editar Empresa</a>
+            {%else%}
+                <a href="{%url 'cria_empresa'%}">Cadastrar Empresa</a>
+            {%endif%}
+        </div>
+    </div>
+{% endblock %}
