@@ -3,6 +3,7 @@
     Funcionarios <br>
     {%for funcionario in object_list%}
         <a href="{% url 'edita_funcionario' funcionario.id %}">{{funcionario}}</a>
+        <a href="{%url 'apaga_funcionario' funcionario.id %}">del</a>
          <br>
     {% endfor %}
 {%endblock%}
