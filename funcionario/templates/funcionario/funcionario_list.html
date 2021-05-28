@@ -2,6 +2,7 @@
 {%block main%}
     Funcionarios <br>
     {%for funcionario in object_list%}
-        {{funcionario}} <br>
+        <a href="{% url 'edita_funcionario' funcionario.id %}">{{funcionario}}</a>
+         <br>
     {% endfor %}
 {%endblock%}
